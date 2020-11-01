@@ -32,15 +32,15 @@ public class Triangle {
     double side3 = (Math.round((v3.distanceTo(v1)) * 10000) / 10000.0);
     if (side1 == side2 && side2 == side3) {
       answer = "equilateral";
-    } else if (side1 == side2 || side2 == side3 ) {
+    } else if (side1 == side2 || side2 == side3 || side1 == side3) {
       answer = "isosceles";
     } else answer = "scalene";
     return answer;
   }
   public String toString() {
-    return ("v1("+ v1.getX() + "," + v1.getY()
-    + ") v2(" + v2.getX() + "," + v2.getY()
-    + ") v3" + v3.getX() + "," + v3.getY() + ")" );
+    return ("v1("+ v1.getX() + ", " + v1.getY()
+    + ") v2(" + v2.getX() + ", " + v2.getY()
+    + ") v3(" + v3.getX() + ", " + v3.getY() + ")" );
   }
   //mutator
   public void setVertex(int index, Point newP) {
